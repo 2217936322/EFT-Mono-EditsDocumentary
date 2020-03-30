@@ -15,6 +15,10 @@ internal static partial class Class892
 		{
 			return;
 		}
+		if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MaoLogs\\"))
+		{
+			Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MaoLogs\\");
+		}
 		File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\MaoLogs\\" + new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds().ToString() + ".log", string.Concat(new object[]
 		{
 			connection.address + "::" + connection.hostId,
