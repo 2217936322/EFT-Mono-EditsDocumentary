@@ -1,0 +1,57 @@
+```cs
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
+using Comfort.Common;
+using Diz.Binding;
+using EFT.Animations;
+using EFT.Ballistics;
+using EFT.HealthSystem;
+using EFT.Interactive;
+using EFT.InventoryLogic;
+using EFT.MovingPlatforms;
+using JetBrains.Annotations;
+using NLog;
+using RootMotion.FinalIK;
+using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.Networking;
+using UnityEngine.UI;
+
+namespace EFT
+{
+	// Token: 0x02000C1D RID: 3101
+	public partial class Player : MonoBehaviour, GInterface42, GInterface50, GInterface51, GInterface52, GInterface61, MovingPlatform.GInterface180
+	{
+		// Token: 0x02000CA2 RID: 3234
+		public abstract partial class GClass947
+		{
+			// Token: 0x02000CA3 RID: 3235
+			protected partial class HandsControllerOperationLogger : AbstractLogger
+			{
+				// Token: 0x06004B12 RID: 19218 RVA: 0x00241CB0 File Offset: 0x0023FEB0
+				public void TraceProhibitedCall()
+				{
+					if (base.IsEnabled(LogLevel.Trace))
+					{
+          /*
+						StackFrame stackFrame = new StackFrame(2);
+						base.Log("[{0}][Prohibited method call][{1}::{2}][{3}]", "<color='red'>[{0}][Prohibited method call][{1}::{2}][{3}]</color>", LogLevel.Debug, new object[]
+						{
+							Time.frameCount,
+							this.gclass947_0.GetType().Name,
+							stackFrame.GetMethod().Name,
+							this.string_0
+						});
+          */
+					}
+				}
+			}
+		}
+	}
+}
+```
